@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'SimpleBDD'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of SimpleBDD.'
+  s.summary          = 'Simple library for tests in BDD style, written with Objective-C.'
 
 
   s.description      = <<-DESC
