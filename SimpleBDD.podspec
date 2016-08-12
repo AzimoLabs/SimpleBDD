@@ -16,10 +16,10 @@ Pod::Spec.new do |s|
 	Simple BDD gives you possibiity to improve readability of your tests written in KIF. 
                        DESC
 
-  s.homepage         = 'https://github.com/AzimoLabs/SimpleBDD'
+  s.homepage         = 'https://github.com/AzimoLabs/SimpleBDD.git'
   s.license          = { :type => 'Apache', :file => 'LICENSE' }
   s.author           = { 'Przemysław Wośko' => 'przemek.wosko@azimo.com' }
-  s.source           = { :git => 'https://github.com/AzimoLabs/SimpleBDD', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/AzimoLabs/SimpleBDD.git', :tag => s.version.to_s }
 
   s.ios.deployment_target = '8.0'
 
