@@ -1,0 +1,21 @@
+PODS:
+  - KIF (3.4.2):
+    - KIF/Core (= 3.4.2)
+  - KIF/Core (3.4.2)
+  - SimpleBDD (0.1.0):
+    - KIF (~> 3.4.2)
+
+DEPENDENCIES:
+  - SimpleBDD (from `../`)
+
+EXTERNAL SOURCES:
+  SimpleBDD:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  KIF: b518c9831453abea5afdbbde3908ec47832d6d56
+  SimpleBDD: 1172377817bf36c46942853afe4b41e460da3f5f
+
+PODFILE CHECKSUM: 5fb41f690d4b43475a8c74a59f3ac309a4c57395
+
+COCOAPODS: 1.0.1

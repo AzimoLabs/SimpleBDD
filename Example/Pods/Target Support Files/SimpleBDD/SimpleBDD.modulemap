@@ -1,0 +1,6 @@
+framework module SimpleBDD {
+  umbrella header "SimpleBDD-umbrella.h"
+
+  export *
+  module * { export * }
+}

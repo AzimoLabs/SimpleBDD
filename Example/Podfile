@@ -1,0 +1,6 @@
+use_frameworks!
+target 'SimpleBDD_Tests' do
+  pod 'SimpleBDD', :path => '../'
+  
+  
+end
