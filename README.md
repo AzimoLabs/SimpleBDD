@@ -10,7 +10,7 @@ Shortly BDD (Behaviour Driven Development) focus on:
 * What to call the tests
 * How to understand why a test fails 
 
-## Simple BDD: 
+## SimpleBDD
 
 Simple BDD gives you possibiity to improve readability of your tests written in KIF. 
 Entitre workflow in BDD relays on stories, like that one: 
