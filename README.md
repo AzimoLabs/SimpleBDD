@@ -1,5 +1,5 @@
 # SimpleBDD
-Simple library for tests in BDD style, written with Objective-C.
+Simple library for tests in BDD style, written in Objective-C.
 
 ## BDD 
 
@@ -51,7 +51,9 @@ Here is simple example, for now without any tests, and when it pass it will prod
          
     });
 
-    And(@"And user has password created", ^{});
+    And(@"And user has password created", ^{
+    
+    });
     
     When(@"user opens settings screen", ^{
 
@@ -79,7 +81,7 @@ Here is simple example, for now without any tests, and when it pass it will prod
 This test will pass, so this output will be printed in console:
  
 ```
-Scenario: Change password via settings happy path HAS PASSED
+Scenario: Change password via settings happy path PASSED
 	✓ Given that user is already logged in
 	✓ And user has password created
 	✓ When user opens settings screen
@@ -89,13 +91,13 @@ Scenario: Change password via settings happy path HAS PASSED
 	✓ And user can log in with new password
 ```
 
-**What is great in this framework, it will print entire story when even first step wil fail!**
+**What is great in this framework, it will print entire story when even first step will fail!**
 
-when we will put `[tester failWithMessage:@"Not implemented"]` in step `user opens Create/change password`
-output will be looks like: 
+lets put `[tester failWithMessage:@"Not implemented"]` in step `user opens Create/change password`
+output will be looks like:
 
 ```
-Scenario: Change password via settings happy path HAS PASSED
+Scenario: Change password via settings happy path 
 	✓ Given that user is already logged in
 	✓ And user has password created
 	✓ When user opens settings screen
@@ -115,7 +117,7 @@ NSString *description = [[KIFBDDScenarioCoordinator sharedCoordintator] scenario
 ## Underhood magic
 In this library you can find only few macros, that allows override KIF error handling. When you import **SimpleBDD**, `tester` and `viewTester` macros will be redefined. 
 
-`scenario` macro creates under the hood `KIFBDDScenario` variable, so there is no possibility to use `When`, `Then`, `Given` or `And` keywors without describing scenario. 
+`scenario` macro creates under the hood `KIFBDDScenario` variable, so there is no possibility to use `When`, `Then`, `Given`, `And`, `tester` and `viewTester` without describing scenario. 
 
 
 ## Requirements 
