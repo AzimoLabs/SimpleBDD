@@ -1,5 +1,6 @@
 #import <UIKit/UIKit.h>
 
+#import "KIFBDDKeywords.h"
 #import "KIFBDDScenario.h"
 #import "KIFBDDScenarioCoordinator.h"
 #import "KIFBDDTestCase.h"

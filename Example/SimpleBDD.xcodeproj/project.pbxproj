@@ -7,15 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2141A7CA1D6F130400B820EE /* Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 2141A7C91D6F130400B820EE /* Test.m */; };
+		21DE5E4F1D6F0DA4005DF8BE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 21DE5E4E1D6F0DA4005DF8BE /* main.m */; };
+		21DE5E521D6F0DA4005DF8BE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 21DE5E511D6F0DA4005DF8BE /* AppDelegate.m */; };
+		21DE5E551D6F0DA4005DF8BE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21DE5E541D6F0DA4005DF8BE /* ViewController.m */; };
+		21DE5E581D6F0DA4005DF8BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21DE5E561D6F0DA4005DF8BE /* Main.storyboard */; };
+		21DE5E5A1D6F0DA4005DF8BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21DE5E591D6F0DA4005DF8BE /* Assets.xcassets */; };
+		21DE5E5D1D6F0DA4005DF8BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21DE5E5B1D6F0DA4005DF8BE /* LaunchScreen.storyboard */; };
 		6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F5AF195388D20070C39A /* XCTest.framework */; };
 		6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
-		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		BCAA3037482461526A7D92F4 /* Pods_SimpleBDD_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E41258D8AC2C165D5F2EE88 /* Pods_SimpleBDD_Tests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2141A7C91D6F130400B820EE /* Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test.m; sourceTree = "<group>"; };
+		21DE5E4B1D6F0DA4005DF8BE /* BDD Test Host.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BDD Test Host.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		21DE5E4E1D6F0DA4005DF8BE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		21DE5E501D6F0DA4005DF8BE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		21DE5E511D6F0DA4005DF8BE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		21DE5E531D6F0DA4005DF8BE /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		21DE5E541D6F0DA4005DF8BE /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		21DE5E571D6F0DA4005DF8BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		21DE5E591D6F0DA4005DF8BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		21DE5E5C1D6F0DA4005DF8BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		21DE5E5E1D6F0DA4005DF8BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F788E0356698F12382094B9 /* SimpleBDD.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SimpleBDD.podspec; path = ../SimpleBDD.podspec; sourceTree = "<group>"; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -24,7 +41,6 @@
 		6003F5AF195388D20070C39A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		6003F5B7195388D20070C39A /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
 		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		79186666DABD9BEDF24ED6B1 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		7E41258D8AC2C165D5F2EE88 /* Pods_SimpleBDD_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleBDD_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -34,6 +50,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		21DE5E481D6F0DA4005DF8BE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6003F5AB195388D20070C39A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -48,6 +71,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		21DE5E4C1D6F0DA4005DF8BE /* BDD Test Host */ = {
+			isa = PBXGroup;
+			children = (
+				21DE5E501D6F0DA4005DF8BE /* AppDelegate.h */,
+				21DE5E511D6F0DA4005DF8BE /* AppDelegate.m */,
+				21DE5E531D6F0DA4005DF8BE /* ViewController.h */,
+				21DE5E541D6F0DA4005DF8BE /* ViewController.m */,
+				21DE5E561D6F0DA4005DF8BE /* Main.storyboard */,
+				21DE5E591D6F0DA4005DF8BE /* Assets.xcassets */,
+				21DE5E5B1D6F0DA4005DF8BE /* LaunchScreen.storyboard */,
+				21DE5E5E1D6F0DA4005DF8BE /* Info.plist */,
+				21DE5E4D1D6F0DA4005DF8BE /* Supporting Files */,
+			);
+			path = "BDD Test Host";
+			sourceTree = "<group>";
+		};
+		21DE5E4D1D6F0DA4005DF8BE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				21DE5E4E1D6F0DA4005DF8BE /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		2B40868C417828B2A1BF916F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -62,6 +109,7 @@
 			children = (
 				60FF7A9C1954A5C5007DD14C /* Podspec Metadata */,
 				6003F5B5195388D20070C39A /* Tests */,
+				21DE5E4C1D6F0DA4005DF8BE /* BDD Test Host */,
 				6003F58C195388D20070C39A /* Frameworks */,
 				6003F58B195388D20070C39A /* Products */,
 				2B40868C417828B2A1BF916F /* Pods */,
@@ -72,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				6003F5AE195388D20070C39A /* SimpleBDD_Tests.xctest */,
+				21DE5E4B1D6F0DA4005DF8BE /* BDD Test Host.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -91,8 +140,8 @@
 		6003F5B5195388D20070C39A /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				6003F5BB195388D20070C39A /* Tests.m */,
 				6003F5B6195388D20070C39A /* Supporting Files */,
+				2141A7C91D6F130400B820EE /* Test.m */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -120,6 +169,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		21DE5E4A1D6F0DA4005DF8BE /* BDD Test Host */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 21DE5E5F1D6F0DA4005DF8BE /* Build configuration list for PBXNativeTarget "BDD Test Host" */;
+			buildPhases = (
+				21DE5E471D6F0DA4005DF8BE /* Sources */,
+				21DE5E481D6F0DA4005DF8BE /* Frameworks */,
+				21DE5E491D6F0DA4005DF8BE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "BDD Test Host";
+			productName = "BDD Test Host";
+			productReference = 21DE5E4B1D6F0DA4005DF8BE /* BDD Test Host.app */;
+			productType = "com.apple.product-type.application";
+		};
 		6003F5AD195388D20070C39A /* SimpleBDD_Tests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6003F5C2195388D20070C39A /* Build configuration list for PBXNativeTarget "SimpleBDD_Tests" */;
@@ -150,6 +216,9 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Przemysław Wośko";
 				TargetAttributes = {
+					21DE5E4A1D6F0DA4005DF8BE = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
 					};
@@ -169,11 +238,22 @@
 			projectRoot = "";
 			targets = (
 				6003F5AD195388D20070C39A /* SimpleBDD_Tests */,
+				21DE5E4A1D6F0DA4005DF8BE /* BDD Test Host */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		21DE5E491D6F0DA4005DF8BE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				21DE5E5D1D6F0DA4005DF8BE /* LaunchScreen.storyboard in Resources */,
+				21DE5E5A1D6F0DA4005DF8BE /* Assets.xcassets in Resources */,
+				21DE5E581D6F0DA4005DF8BE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6003F5AC195388D20070C39A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -233,17 +313,43 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		21DE5E471D6F0DA4005DF8BE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				21DE5E551D6F0DA4005DF8BE /* ViewController.m in Sources */,
+				21DE5E521D6F0DA4005DF8BE /* AppDelegate.m in Sources */,
+				21DE5E4F1D6F0DA4005DF8BE /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6003F5AA195388D20070C39A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6003F5BC195388D20070C39A /* Tests.m in Sources */,
+				2141A7CA1D6F130400B820EE /* Test.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		21DE5E561D6F0DA4005DF8BE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				21DE5E571D6F0DA4005DF8BE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		21DE5E5B1D6F0DA4005DF8BE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				21DE5E5C1D6F0DA4005DF8BE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
 		6003F5B8195388D20070C39A /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -255,6 +361,43 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		21DE5E601D6F0DA4005DF8BE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "BDD Test Host/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.azimo.labs.BDD-Test-Host";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		21DE5E611D6F0DA4005DF8BE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "BDD Test Host/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.azimo.labs.BDD-Test-Host";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		6003F5BD195388D20070C39A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -373,6 +516,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		21DE5E5F1D6F0DA4005DF8BE /* Build configuration list for PBXNativeTarget "BDD Test Host" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				21DE5E601D6F0DA4005DF8BE /* Debug */,
+				21DE5E611D6F0DA4005DF8BE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		6003F585195388D10070C39A /* Build configuration list for PBXProject "SimpleBDD" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

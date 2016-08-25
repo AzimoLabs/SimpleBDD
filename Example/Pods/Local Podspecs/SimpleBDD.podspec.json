@@ -1,18 +1,18 @@
 {
   "name": "SimpleBDD",
   "version": "0.1.0",
-  "summary": "A short description of SimpleBDD.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/<GITHUB_USERNAME>/SimpleBDD",
+  "summary": "Simple library for tests in BDD style, written with Objective-C.",
+  "description": "Simple BDD gives you possibiity to improve readability of your tests written in KIF.",
+  "homepage": "https://github.com/AzimoLabs/SimpleBDD.git",
   "license": {
-    "type": "MIT",
+    "type": "Apache",
     "file": "LICENSE"
   },
   "authors": {
     "Przemysław Wośko": "przemek.wosko@azimo.com"
   },
   "source": {
-    "git": "https://github.com/<GITHUB_USERNAME>/SimpleBDD.git",
+    "git": "https://github.com/AzimoLabs/SimpleBDD.git",
     "tag": "0.1.0"
   },
   "platforms": {
