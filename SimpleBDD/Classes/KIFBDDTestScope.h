@@ -7,27 +7,22 @@
 //
 
 
-#import "KIFBDDScenario.h"
 @import Foundation;
-@class KIFBDDTestScope;
 
 typedef void (^KIFBDDTestStep)();
 
 @interface KIFBDDTestScope : NSObject
 
-@property (weak) KIFBDDScenario *scenario;
+@property (nonatomic, strong) NSString *stepName;
+@property (nonatomic, strong) NSString *stepTypeName;
+@property (nonatomic, copy) KIFBDDTestStep testStep;
 
-+ (instancetype)stepWithDelegate:(id<KIFTestActorDelegate>)delegate
-                        scenario:(KIFBDDScenario *)scenario;
+- (instancetype)initBDDGiven:(NSString *)name step:(KIFBDDTestStep)testStep;
 
-- (instancetype)initWithScenario:(KIFBDDScenario *)scenario;
+- (instancetype)initBDDWhen:(NSString *)name step:(KIFBDDTestStep)testStep;
 
-- (void)BDDGiven:(NSString *)name step:(KIFBDDTestStep)testStep;
+- (instancetype)initBDDAnd:(NSString *)name step:(KIFBDDTestStep)testStep;
 
-- (void)BDDWhen:(NSString *)name step:(KIFBDDTestStep)testStep;
-
-- (void)BDDAnd:(NSString *)name step:(KIFBDDTestStep)testStep;
-
-- (void)BDDThen:(NSString *)name step:(KIFBDDTestStep)testStep;
+- (instancetype)initBDDThen:(NSString *)name step:(KIFBDDTestStep)testStep;
 
 @end

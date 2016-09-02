@@ -2,10 +2,14 @@ PODS:
   - KIF (3.4.2):
     - KIF/Core (= 3.4.2)
   - KIF/Core (3.4.2)
+  - OCHamcrest (5.4.0)
+  - OCMockito (3.0.2):
+    - OCHamcrest (~> 5.1)
   - SimpleBDD (0.1.0):
     - KIF (~> 3.4.2)
 
 DEPENDENCIES:
+  - OCMockito (~> 3.0)
   - SimpleBDD (from `../`)
 
 EXTERNAL SOURCES:
@@ -14,8 +18,10 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   KIF: b518c9831453abea5afdbbde3908ec47832d6d56
+  OCHamcrest: 5c1d441c5a82fb18ac17c2aeb52ec1a99edb971b
+  OCMockito: 2cb6c2267cbc76537be56281cd47cdb5a7c27541
   SimpleBDD: fe8101b16d9e3fff62356ca156eedb3cff6bef78
 
-PODFILE CHECKSUM: 5fb41f690d4b43475a8c74a59f3ac309a4c57395
+PODFILE CHECKSUM: 0a3269302170a019788e2cdff2cdd33c665663fd
 
 COCOAPODS: 1.0.1

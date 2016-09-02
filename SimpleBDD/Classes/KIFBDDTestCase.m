@@ -31,12 +31,16 @@
 #pragma mark - logging exceptions
 
 - (void)failWithException:(NSException *)exception stopTest:(BOOL)stop {
-    if ([KIFBDDScenarioCoordinator sharedCoordintator].afterEachInvoked) {
+    KIFBDDScenarioCoordinator *coordinator  = [KIFBDDScenarioCoordinator sharedCoordintator];
+    if (!coordinator.isBDDTestCase) {
         [super failWithException:exception stopTest:stop];
     } else {
-        [self failWithExceptions:@[exception] stopTest:stop];
+        if (coordinator.afterEachInvoked) {
+            [super failWithException:exception stopTest:stop];
+        } else {
+            [self failWithExceptions:@[exception] stopTest:stop];
+        }
     }
-    
 }
 
 - (void)failWithExceptions:(NSArray *)exceptions stopTest:(BOOL)stop {

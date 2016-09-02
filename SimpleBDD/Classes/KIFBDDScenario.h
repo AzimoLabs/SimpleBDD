@@ -7,12 +7,10 @@
 //
 
 #import <KIF/KIF.h>
-#import "KIFBDDScenarioCoordinator.h"
 
 #define scenario(description, delegate) \
 \
 KIFBDDScenario *currentScenario = [[KIFBDDScenario alloc] initWithScenarioName:description errorHandler:delegate]; \
-[[KIFBDDScenarioCoordinator sharedCoordintator] addScenarioName:description]; \
 [KIFBDDScenarioCoordinator sharedCoordintator].currentExecutedScenario = currentScenario;
 \
 
