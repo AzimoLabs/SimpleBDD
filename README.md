@@ -117,8 +117,6 @@ NSString *description = [[KIFBDDScenarioCoordinator sharedCoordintator] scenario
 ## Underhood magic
 In this library you can find only few macros, that allows override KIF error handling. When you import **SimpleBDD**, `tester` and `viewTester` macros will be redefined. 
 
-`scenario` macro creates under the hood `KIFBDDScenario` variable, so there is no possibility to use `When`, `Then`, `Given`, `And`, `tester` and `viewTester` without describing scenario. 
-
 
 ## Requirements 
 
