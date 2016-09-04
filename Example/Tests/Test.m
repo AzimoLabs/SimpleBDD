@@ -2,14 +2,17 @@
 //  Test.m
 //  SimpleBDD
 //
-//  Created by kudl helBell on 25/08/16.
+//  Created by Przemysław Wośko on 25/08/16.
 //  Copyright © 2016 Przemysław Wośko. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>
-@import SimpleBDD;
+#import <SimpleBDD/SimpleBDD-umbrella.h>
 
-@interface Test : XCTestCase
+#import <OCHamcrest/OCHamcrest.h>
+#import <OCMockito/OCMockito.h>
+
+@interface Test : KIFBDDTestCase
 
 @end
 
@@ -17,24 +20,97 @@
 
 - (void)setUp {
     [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
 }
 
 - (void)tearDown {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
     [super tearDown];
 }
 
-- (void)testExample {
-    // This is an example of a functional test case.
-    // Use XCTAssert and related functions to verify your tests produce the correct results.
+- (void)testWhenEpmtyScenario {
+    
+    scenario(@"test execute empty scenario", self)
+    
+    Given(@"Empty scenario", ^{
+        
+    });
+    
+    When(@"no implemented steps", ^{
+        
+    });
+    
+    Then(@"should pass", ^{
+        
+    });
 }
 
-- (void)testPerformanceExample {
-    // This is an example of a performance test case.
-    [self measureBlock:^{
-        // Put the code you want to measure the time of here.
-    }];
+- (void)testWhenFirstStepFails {
+    
+    scenario(@"test case fails from KIF error in first step", self)
+    
+    Given(@"Step should fail in this step", ^{
+        [tester failWithMessage:@"expected to fail"];
+    });
+    
+    When(@"", ^{
+        
+    });
+    
+    Then(@"story should be collected", ^{
+        
+    });
+    
+    assertThatInteger([KIFBDDScenarioCoordinator sharedCoordintator].steps.count, is(@3));
 }
+
+- (void)testWhenViewTesterWillFail {
+    scenario(@"test example empty scenario", self)
+    
+    Given(@"Step should fail in this step", ^{
+        [viewTester failWithMessage:@"expected to fail"];
+    });
+    
+    When(@"test case will not fail", ^{
+        
+    });
+    
+    Then(@"Kill app to get an error", ^{
+        exit(0);
+    });
+    
+}
+
+- (void)testShouldFailForXCAssert {
+    scenario(@"test should fail if XCAssert was used", self);
+    
+    When(@"empty block first", ^{
+        
+    });
+    
+    Given(@"this step fail", ^{
+        XCTAssertNotNil(nil, @"fail");
+    });
+    
+    Then(@"one more step should be printed as failed but not executed", ^{
+        
+    });
+}
+
+- (void)testTestSuiteShouldReactToMockioAssertions {
+    scenario(@"mockito usage tests", self)
+    
+    When(@"empty block first", ^{
+        
+    });
+    
+    Given(@"assertThat usage tests", ^{
+        assertThatBool(NO, isTrue());
+    });
+    
+    When(@"step that shouldn't be executed", ^{
+        exit(0);
+    });
+    
+}
+
 
 @end

@@ -7,57 +7,52 @@
 //
 
 #import "KIFBDDTestScope.h"
-#import "KIFBDDScenarioCoordinator.h"
 
 @interface KIFBDDTestScope()
-
-@property (nonatomic, strong) NSString *stepTypeName;
-@property (copy) KIFBDDTestStep block;
 
 @end
 
 @implementation KIFBDDTestScope
 
-- (instancetype)initWithScenario:(KIFBDDScenario *)scenario {
+- (instancetype)initWithName:(NSString *)name step:(KIFBDDTestStep)testStep {
     self = [super init];
     if (self) {
-        _scenario = scenario;
+        _stepName = name;
+        _testStep = testStep;
     }
     return self;
 }
 
-+ (instancetype)stepWithDelegate:(id<KIFTestActorDelegate>)delegate scenario:(KIFBDDScenario *)scenario {
-    return [[self alloc] initWithScenario:scenario];
-}
-
-- (void)BDDGiven:(NSString *)name step:(KIFBDDTestStep)testStep {
-    self.stepTypeName = @"Given";
-    [self executeStepWithName:name step:testStep type:self.stepTypeName];
-}
-
-- (void)BDDWhen:(NSString *)name step:(KIFBDDTestStep)testStep {
-    self.stepTypeName = @"When";
-    [self executeStepWithName:name step:testStep type:self.stepTypeName];
-}
-
-- (void)BDDAnd:(NSString *)name step:(KIFBDDTestStep)testStep {
-    self.stepTypeName = @"And";
-    [self executeStepWithName:name step:testStep type:self.stepTypeName];
-}
-
-- (void)BDDThen:(NSString *)name step:(KIFBDDTestStep)testStep {
-    self.stepTypeName = @"Then";
-    [self executeStepWithName:name step:testStep type:self.stepTypeName];
-}
-
-#pragma mark - private
-
-- (void)executeStepWithName:(NSString *)name step:(KIFBDDTestStep)testStep type:(NSString *)type {
-    if ([[KIFBDDScenarioCoordinator sharedCoordintator] shouldExecuteTestStep]) {
-        self.block = testStep;
-        self.block();
+- (instancetype)initBDDGiven:(NSString *)name step:(KIFBDDTestStep)testStep {
+    self = [self initWithName:name step:testStep];
+    if (self) {
+        _stepTypeName = @"Given";
     }
-    [[KIFBDDScenarioCoordinator sharedCoordintator] recordStep:[[KIFBDDTestStepDescription alloc] initWithName:name type:type failed:![[KIFBDDScenarioCoordinator sharedCoordintator] shouldExecuteTestStep]]];
+    return self;
+}
+
+- (instancetype)initBDDWhen:(NSString *)name step:(KIFBDDTestStep)testStep {
+    self = [self initWithName:name step:testStep];
+    if (self) {
+        _stepTypeName = @"When";
+    }
+    return self;
+}
+
+- (instancetype)initBDDAnd:(NSString *)name step:(KIFBDDTestStep)testStep {
+    self = [self initWithName:name step:testStep];
+    if (self) {
+        _stepTypeName = @"And";
+    }
+    return self;
+}
+
+- (instancetype)initBDDThen:(NSString *)name step:(KIFBDDTestStep)testStep {
+    self = [self initWithName:name step:testStep];
+    if (self) {
+        _stepTypeName = @"Then";
+    }
+    return self;
 }
 
 @end

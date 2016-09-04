@@ -21,8 +21,18 @@
 		BCAA3037482461526A7D92F4 /* Pods_SimpleBDD_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E41258D8AC2C165D5F2EE88 /* Pods_SimpleBDD_Tests.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		2141A7CB1D6F306E00B820EE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6003F582195388D10070C39A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 21DE5E4A1D6F0DA4005DF8BE;
+			remoteInfo = "BDD Test Host";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
-		2141A7C91D6F130400B820EE /* Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test.m; sourceTree = "<group>"; };
+		2141A7C91D6F130400B820EE /* Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Test.m; path = ../Test.m; sourceTree = "<group>"; };
 		21DE5E4B1D6F0DA4005DF8BE /* BDD Test Host.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BDD Test Host.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		21DE5E4E1D6F0DA4005DF8BE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		21DE5E501D6F0DA4005DF8BE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -71,6 +81,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		21C3EB7C1D797BAF00F9CC10 /* IntegrationTests */ = {
+			isa = PBXGroup;
+			children = (
+				2141A7C91D6F130400B820EE /* Test.m */,
+			);
+			path = IntegrationTests;
+			sourceTree = "<group>";
+		};
 		21DE5E4C1D6F0DA4005DF8BE /* BDD Test Host */ = {
 			isa = PBXGroup;
 			children = (
@@ -140,8 +158,8 @@
 		6003F5B5195388D20070C39A /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				21C3EB7C1D797BAF00F9CC10 /* IntegrationTests */,
 				6003F5B6195388D20070C39A /* Supporting Files */,
-				2141A7C91D6F130400B820EE /* Test.m */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -200,6 +218,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				2141A7CC1D6F306E00B820EE /* PBXTargetDependency */,
 			);
 			name = SimpleBDD_Tests;
 			productName = SimpleBDDTests;
@@ -220,7 +239,7 @@
 						CreatedOnToolsVersion = 7.3.1;
 					};
 					6003F5AD195388D20070C39A = {
-						TestTargetID = 6003F589195388D20070C39A;
+						TestTargetID = 21DE5E4A1D6F0DA4005DF8BE;
 					};
 				};
 			};
@@ -333,6 +352,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		2141A7CC1D6F306E00B820EE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 21DE5E4A1D6F0DA4005DF8BE /* BDD Test Host */;
+			targetProxy = 2141A7CB1D6F306E00B820EE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		21DE5E561D6F0DA4005DF8BE /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -371,7 +398,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "BDD Test Host/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.azimo.labs.BDD-Test-Host";
@@ -390,7 +417,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "BDD Test Host/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.azimo.labs.BDD-Test-Host";
@@ -475,6 +502,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9AEA299E71A7BFFDA9DED9D9 /* Pods-SimpleBDD_Tests.debug.xcconfig */;
 			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -489,7 +517,7 @@
 				INFOPLIST_FILE = "Tests/Tests-Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SimpleBDD_Example.app/SimpleBDD_Example";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BDD Test Host.app/BDD Test Host";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Debug;
@@ -498,6 +526,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CB3471ACB3F75EB0BF46057E /* Pods-SimpleBDD_Tests.release.xcconfig */;
 			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -508,7 +537,7 @@
 				INFOPLIST_FILE = "Tests/Tests-Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SimpleBDD_Example.app/SimpleBDD_Example";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BDD Test Host.app/BDD Test Host";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;

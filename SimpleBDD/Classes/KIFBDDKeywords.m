@@ -9,21 +9,24 @@
 #import "KIFBDDKeywords.h"
 
 void Given(NSString *desc, KIFBDDTestStep step) {
-    [[[KIFBDDTestScope alloc] initWithScenario:[KIFBDDScenarioCoordinator sharedCoordintator].currentExecutedScenario] BDDGiven:desc step:step];
+    KIFBDDTestScope *scope = [[KIFBDDTestScope alloc] initBDDGiven:desc step:step];
+    [[KIFBDDScenarioCoordinator sharedCoordintator] executreStepScope:scope];
 }
 
 void And(NSString *desc, KIFBDDTestStep step) {
-    [[[KIFBDDTestScope alloc] initWithScenario:[KIFBDDScenarioCoordinator sharedCoordintator].currentExecutedScenario] BDDAnd:desc step:step];
+    KIFBDDTestScope *scope = [[KIFBDDTestScope alloc] initBDDAnd:desc step:step];
+    [[KIFBDDScenarioCoordinator sharedCoordintator] executreStepScope:scope];
 }
 
 void Then(NSString *desc, KIFBDDTestStep step) {
-    [[[KIFBDDTestScope alloc] initWithScenario:[KIFBDDScenarioCoordinator sharedCoordintator].currentExecutedScenario] BDDThen:desc step:step];
+    KIFBDDTestScope *scope = [[KIFBDDTestScope alloc] initBDDThen:desc step:step];
+    [[KIFBDDScenarioCoordinator sharedCoordintator] executreStepScope:scope];
 }
 
 void When(NSString *desc, KIFBDDTestStep step) {
-    [[[KIFBDDTestScope alloc] initWithScenario:[KIFBDDScenarioCoordinator sharedCoordintator].currentExecutedScenario] BDDWhen:desc step:step];
+    KIFBDDTestScope *scope = [[KIFBDDTestScope alloc] initBDDWhen:desc step:step];
+    [[KIFBDDScenarioCoordinator sharedCoordintator] executreStepScope:scope];
 }
-
 
 @implementation KIFBDDKeywords
 

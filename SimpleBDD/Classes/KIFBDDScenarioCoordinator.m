@@ -12,8 +12,7 @@
 
 @interface KIFBDDScenarioCoordinator()
 
-@property (strong) NSString *currentScenario;
-@property (strong) NSMutableArray<KIFBDDTestStepDescription *> *steps;
+@property (nonatomic, strong, readwrite) NSMutableArray<KIFBDDTestStepDescription *> *steps;
 
 @end
 
@@ -39,11 +38,7 @@
 }
 
 - (BOOL)isBDDTestCase {
-    return self.currentScenario.length > 0;
-}
-
-- (void)addScenarioName:(NSString *)scenario {
-    self.currentScenario = scenario;
+    return self.currentExecutedScenario != nil;
 }
 
 - (void)recordStep:(KIFBDDTestStepDescription *)stepDescription {
@@ -60,13 +55,10 @@
     }
 }
 
-- (BOOL)shouldExecuteTestStep {
-    return !self.isScenarioFailed;
-}
-
+// TODO : refactor this
 - (NSString *)scenarioDescription {
     NSString *result = @" ";
-    NSString *overallScenario =  [NSString stringWithFormat:@"  Executed scenario: %@  %@  \n", self.currentScenario, self.isScenarioFailed? @" HAS FAILED!": @" PASSED!"];
+    NSString *overallScenario =  [NSString stringWithFormat:@"  Executed scenario: %@  %@  \n", self.currentExecutedScenario.scenarioName, self.isScenarioFailed? @" FAILED!": @" PASSED!"];
     result = [result stringByAppendingString:overallScenario];
     for (KIFBDDTestStepDescription *step in self.steps) {
       result = [result stringByAppendingString:[step description]];
@@ -78,9 +70,25 @@
 - (void)clear {
     [self.steps removeAllObjects];
     self.isScenarioFailed = NO;
-    self.currentScenario = nil;
+    self.currentExecutedScenario = nil;
     [self.exceptios removeAllObjects];
 }
 
+- (void)executreStepScope:(KIFBDDTestScope *)testScope {
+    if (!self.isScenarioFailed) {
+        @try {
+            testScope.testStep();
+            
+        } @catch (NSException *exception) {
+            [self markAsFailed];
+            [self failedWithExceptions:@[exception]];
+        } @finally {
+           
+        }
+    }
+    
+    KIFBDDTestStepDescription *stepRecord = [[KIFBDDTestStepDescription alloc] initWithName:testScope.stepName type:testScope.stepTypeName failed:self.isScenarioFailed];
+    [self recordStep:stepRecord];
+}
 
 @end
