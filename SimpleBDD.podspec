@@ -31,5 +31,5 @@ Pod::Spec.new do |s|
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   s.frameworks = 'XCTest'
-  s.dependency 'KIF', '~> 3.4.2'
+  s.dependency 'KIF', '~> 3.5.1'
 end
