@@ -10,7 +10,7 @@ Shortly BDD (Behaviour Driven Development) focus on:
 * What to test and what not to test
 * How much to test in one go
 * What to call the tests
-* How to understand why a test fails 
+* Understand why a test fails 
 
 ## SimpleBDD
 
