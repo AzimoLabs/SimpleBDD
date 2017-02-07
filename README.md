@@ -1,3 +1,5 @@
+[![codebeat badge](https://codebeat.co/badges/4bd58642-ba3d-45bc-a4d6-37521e3685bb)](https://codebeat.co/projects/github-com-azimolabs-simplebdd)
+
 # SimpleBDD
 Simple library for tests in BDD style, written in Objective-C.
 
